@@ -29,6 +29,8 @@ require.config({
         fetch: 'components/fetch/fetch',
         'file-saver': 'components/file-saver.js/FileSaver',
         forms: 'lib/forms',
+        formulajs: 'browserified/formulajs/index',
+        ruleJS: 'components/ruleJS/dist/js/ruleJS',
         highlightjs: 'lib/highlight.js/highlight.pack',
         jcampconverter: 'components/jcampconverter/dist/jcampconverter.min',
         jqgrid: 'components/jqgrid_edit/js/jquery.jqGrid',
@@ -109,6 +111,11 @@ require.config({
         msa: {
             exports: 'msa'
         },
+        formulajs: {
+            init: function() {
+                console.log(this, arguments);
+            }
+        },
         'x2js': {
             exports: 'X2JS'
         },
@@ -124,6 +131,9 @@ require.config({
         'lib/parser/Parser': {
             exports: 'Parser'
         },
+        'components/ruleJS/dist/js/ruleJS': '',
+        'components/handsontable-ruleJS/src/handsontable.formula': ['components/handsontable/dist/handsontable.full'],
+        ruleJS:  ['jquery', 'components/ruleJS/dist/js/parser', 'components/handsontable-ruleJS/src/handsontable.formula', 'formulajs'],
         'jquery-cookie': 'jquery',
         'select2': ['jquery'],
         'jsbarcode': ['jquery'],
@@ -186,7 +196,7 @@ require([
     'uri/URI.fragmentQuery',
     'bluebird',
     'components/setImmediate/setImmediate',
-    'lib/regenerator/regenerator-runtime'
+    'lib/regenerator/regenerator-runtime',
 ], function (Version, $, Datas, EntryPoint, URI, Promise) {
     window.Promise = Promise;
     Promise.config({

@@ -70,6 +70,7 @@
     "angularplasmid": "^1.0.5",
     "bio-parsers": "^4.1.6",
     "country-data": "0.0.31",
+    "formulajs": "^1.0.8",
     "katex": "^0.7.0",
     "mime-types": "^2.1.10",
     "superagent": "^3.5.0",

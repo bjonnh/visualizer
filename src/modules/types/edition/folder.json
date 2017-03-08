@@ -36,6 +36,10 @@
     {
       "moduleName": "Templated form",
       "url": "modules/types/edition/form/"
+    },
+    {
+      "moduleName": "Handson table",
+      "url": "modules/types/edition/handsontable/"
     }
   ],
   "name": "Edition",

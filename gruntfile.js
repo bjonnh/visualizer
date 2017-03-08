@@ -77,7 +77,18 @@ module.exports = function (grunt) {
                 },
                 options: {
                     browserifyOptions: {
-                        standalone: 'bioParsers'
+                        standalone: 'bioParsers',
+                        force: true
+                    }
+                }
+            },
+            formulajs: {
+                files: {
+                    'src/browserified/formulajs/index.js': ['./node_modules/formulajs/index.js'],
+                },
+                options: {
+                    browserifyOptions: {
+                        standalone: 'Formula'
                     }
                 }
             }
